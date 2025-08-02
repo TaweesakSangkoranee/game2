@@ -27,11 +27,11 @@ h1 {
   max-width: 600px;
   height: 600px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.15); /* semi-transparent background */
   border: 4px solid #fff;
   border-radius: 20px;
   overflow: hidden;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px); /* blurred background effect */
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
@@ -40,12 +40,12 @@ h1 {
   width: 90px;
   height: 90px;
   cursor: pointer;
-  animation: fall 5s linear forwards;
+  animation: fall 5s linear forwards; /* falling animation */
   transition: transform 0.2s ease;
 }
 
 .item:active {
-  transform: scale(1.2);
+  transform: scale(1.2); /* enlarge item when clicked */
 }
 
 @keyframes fall {
