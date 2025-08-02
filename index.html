@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🍓 Fantasy Catch Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🍓 Fantasy Catch Game</h1>
+
+  <div class="info-bar">
+    <div id="score">Score: 0</div>
+    <div id="timer">⏱ Time: 60</div>
+  </div>
+
+  <div id="gameArea"></div>
+
+  <audio id="goodSound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_7b5bfa84f6.mp3"></audio>
+  <audio id="badSound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_c0d2186167.mp3"></audio>
+
+  <div id="gameOverScreen" class="hidden">
+    <div class="game-over-box">
+      <h2>🎉 เกมจบแล้ว!</h2>
+      <p id="finalScore">คุณได้คะแนน: 0</p>
+      <button onclick="restartGame()">🔁 เริ่มใหม่</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
