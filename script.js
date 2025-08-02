@@ -47,10 +47,10 @@ function spawnItem() {
 
     if (isBomb) {
       badSound.play();
-      // ลดคะแนน 1 แต่ไม่ต่ำกว่า 0
+      // Deduct 1 point but not below 0
       score = Math.max(0, score - 1);
       scoreDisplay.textContent = `Score: ${score} (-1)`;
-      comboCount = 0; // ตัดคอมโบเมื่อโดนระเบิด
+      comboCount = 0; // Reset combo when hit bomb
     } else {
       goodSound.play();
 
@@ -103,7 +103,7 @@ function gameLoop() {
 
 function endGame() {
   gameOver = true;
-  finalScoreDisplay.textContent = `คุณได้คะแนน: ${score}`;
+  finalScoreDisplay.textContent = `Your score: ${score}`;
   gameOverScreen.classList.remove('hidden');
 }
 
@@ -118,13 +118,13 @@ function restartGame() {
   timerDisplay.textContent = '⏱ Time: 60';
   gameOverScreen.classList.add('hidden');
 
-  // ลบไอเท็มตกค้าง
+  // Remove remaining items
   document.querySelectorAll('.item').forEach(item => item.remove());
 
   gameLoop();
   startCountdown();
 }
 
-// เริ่มเกมครั้งแรก
+// Start game for the first time
 gameLoop();
 startCountdown();
